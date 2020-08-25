@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'oj'
+require 'oj' unless defined?(JRUBY_VERSION)
 require 'lorekeeper/fast_logger'
 
 module Lorekeeper
