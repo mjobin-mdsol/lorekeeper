@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.4.0'
 
-  # spec.add_dependency 'oj', '>= 3.4', '< 4.0'
+  spec.add_dependency 'oj', '>= 3.4', '< 4.0' unless defined?(JRUBY_VERSION)
 
   spec.add_development_dependency 'activesupport', '>= 4.0'
   spec.add_development_dependency 'bundler', '>= 1.16', '< 3.0'
@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.8'
   spec.add_development_dependency 'benchmark-ips', '~> 2.3'
   spec.add_development_dependency 'timecop', '~> 0.8'
-  spec.add_development_dependency 'byebug', '~> 11.0'
+  spec.add_development_dependency 'byebug', '~> 11.0' unless defined?(JRUBY_VERSION)
   spec.add_development_dependency 'rbtrace', '~> 0.4'
   spec.add_development_dependency 'simplecov', '~> 0.16'
   spec.add_development_dependency 'mutant-rspec', '~> 0.8'
