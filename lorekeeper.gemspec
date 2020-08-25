@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'benchmark-ips', '~> 2.3'
   spec.add_development_dependency 'timecop', '~> 0.8'
   spec.add_development_dependency 'byebug', '~> 11.0' unless defined?(JRUBY_VERSION)
-  spec.add_development_dependency 'rbtrace', '~> 0.4'
+  spec.add_development_dependency 'rbtrace', '~> 0.4' unless defined?(JRUBY_VERSION)
   spec.add_development_dependency 'simplecov', '~> 0.16'
   spec.add_development_dependency 'mutant-rspec', '~> 0.8'
 end
