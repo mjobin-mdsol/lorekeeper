@@ -2,8 +2,6 @@ require 'benchmark'
 require 'tempfile'
 require 'securerandom'
 require 'benchmark/ips'
-require 'byebug'
-require 'rbtrace'
 
 $LOAD_PATH.unshift(File.expand_path('../lib', __FILE__))
 $LOAD_PATH.uniq!
@@ -32,6 +30,7 @@ end
 # This task is used to help development of Lorekeeper. Use together with rbtrace
 desc 'Runs the code once, sleeping to allow you to attach to it with rbtrace'
 task :run_once do
+  require 'rbtrace'
   contents = 'This is a test, this is only a test. Do not worry about these contents.'
   long_contents = contents * 100
 
