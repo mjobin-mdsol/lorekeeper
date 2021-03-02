@@ -7,9 +7,19 @@ rvm:
   - 2.6.6
   - 2.7.2
   - 3.0.0
+  - jruby-9.2
+  - truffleruby
 
 gemfile:
   - gemfiles/without_oj.Gemfile
   - gemfiles/with_oj.Gemfile
+
+matrix:
+  exclude:
+    - rvm: jruby-9.2
+      gemfile: gemfiles/with_oj.Gemfile
+  allow_failures:
+    # Single rspec failure, which is strange, leaving it for tracking
+    - rvm: truffleruby
 
 script: bundle exec rspec

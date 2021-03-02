@@ -8,7 +8,6 @@ end
 require_relative 'support/fake_io'
 require 'lorekeeper'
 require 'timecop'
-require 'byebug'
 
 RSpec.configure do |config|
   config.disable_monkey_patching!
