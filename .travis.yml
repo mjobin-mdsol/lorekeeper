@@ -9,6 +9,15 @@ rvm:
   - 3.0.0
   - jruby-9.2
   - truffleruby
+  - ruby-head
+  - jruby-head
+  - rbx-head
+  - mruby-head
+  - maglev-head
+  - macruby-head
+  - ironruby-head
+  - opal
+  - topaz
 
 gemfile:
   - gemfiles/without_oj.Gemfile
@@ -17,6 +26,8 @@ gemfile:
 matrix:
   exclude:
     - rvm: jruby-9.2
+      gemfile: gemfiles/with_oj.Gemfile
+    - rvm: jruby-head
       gemfile: gemfiles/with_oj.Gemfile
   allow_failures:
     # Single rspec failure, which is strange, leaving it for tracking
